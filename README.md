@@ -23,5 +23,5 @@ Accepts incoming frames, passing them along to their next-hop destination if the
 
 * gcc network-routing.c -lpthread -lm
 * ./a.out "host-configs/A.txt" "input.bin"
-..* The above command must be run for all config files (A - L) in a ~5 second window
+⋅⋅* The above command must be run for all config files (A - L) in a ~5 second window
 
