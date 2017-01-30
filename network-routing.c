@@ -135,28 +135,6 @@ void parse_config(FILE *f_ptr) {
         
         delimited_count += 1;
     }
-
-    /*//TODO
-    //get fake wlan address line
-    fgets(line_buffer, 128, f_ptr);
-
-    delimited_count = 0;
-
-    //split fake wlan address by ":" and store contents in array
-    delimited_chars = strtok(line_buffer, ":");
-    fake_wlan[delimited_count] = atoi(delimited_chars);
-    delimited_count += 1;
-
-    //continue splitting until end of string
-    while (delimited_chars != NULL) {
-
-        delimited_chars = strtok(NULL, ":");
-
-        if (delimited_count < 6)  
-            fake_wlan[delimited_count] = strtol(delimited_chars, NULL, 16);
-        
-        delimited_count += 1;
-    }*/
   
     //get port number line and store as int
     fgets(line_buffer, 128, f_ptr);
@@ -645,7 +623,7 @@ char* parse_received_frame(unsigned char *frame, int frame_length) {
             }
         }
 
-        //TODO set to 0 when not testing
+        //set to 0 when not testing
         int testing = 1;
 
         if (!frame_seen || !testing) {
